@@ -9,7 +9,10 @@ const images = [
   { src: "images/snickers3.jpg", name: "Snickers 3" },
   { src: "images/snickers4.jpg", name: "Snickers 4" },
   { src: "images/snickers5.jpg", name: "Snickers 5" },
+  { src: 'images/Oreo.jpg', name: 'Oreo' },
+  { src: 'images/Tinky.png', name: 'Tinky' },
   { src: "images/git guilty.gif", name: "I Feel Guilty" },
+
 ];
 
 let currentIndex = 0;
@@ -29,6 +32,7 @@ function updateGallery() {
 }
 
 updateGallery();
+
 
 // to change current index to the next one
 // if at end of gallery, start from begining again
@@ -50,10 +54,12 @@ function prevImage() {
     currentIndex = images.length - 1;
   }
   updateGallery();
+
 }
 
 // change current index to selected thumbnail index
 // call updateGallery
+
 function selectThumbnail(index) {
   currentIndex = index;
   updateGallery();
@@ -66,3 +72,4 @@ rightArrow.addEventListener("click", nextImage);
 thumbnails.forEach((thumbnail, index) => {
   thumbnail.addEventListener("click", () => selectThumbnail(index));
 });
+

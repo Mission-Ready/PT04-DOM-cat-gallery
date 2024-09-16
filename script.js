@@ -8,7 +8,7 @@ const images = [
     { src: 'images/snickers2.jpg', name: 'Snickers 2' },
     { src: 'images/snickers3.jpg', name: 'Snickers 3' },
     { src: 'images/snickers4.jpg', name: 'Snickers 4' },
-    { src: 'images/snickers5.jpg', name: 'Snickers 5' }
+    { src: 'images/snickers5.jpg', name: 'Snickers 5' },
 ];
 
 let currentIndex = 0;
@@ -24,7 +24,7 @@ const thumbnails = document.querySelectorAll(".thumbnail");
 
 // to update the selected image and the displayed image name
 function updateGallery() {
-    selectedImage.src = images[currentIndex].src,
+    selectedImage.src = images[currentIndex].src
     imageName.innerHTML = images[currentIndex].name
 }
 updateGallery()
